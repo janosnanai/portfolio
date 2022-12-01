@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/base-layout.astro";
+
+import Navbar from "../components/navbar.astro";
+import Hero from "../components/hero.astro";
+import About from "../components/about.astro";
+import ProjectList from "../components/project-list.astro";
+import Contact from "../components/contact.astro";
+import Footer from "../components/footer.astro";
+---
+
+<BaseLayout title="The personal site of János Nánai">
+  <header>
+    <Navbar />
+    <Hero />
+  </header>
+  <main>
+    <About />
+    <ProjectList />
+    <Contact />
+  </main>
+  <Footer />
+</BaseLayout>

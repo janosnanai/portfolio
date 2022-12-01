@@ -1,0 +1,14 @@
+---
+import Container from "./common/container.astro";
+import HeadingSecondary from "./common/heading-secondary.astro";
+---
+
+<section class="bg-indigo-900">
+  <Container>
+    <HeadingSecondary>contact me</HeadingSecondary>
+    <form action="/api/post" method="post">
+      <p>contact form here</p>
+      <button class="p-2 bg-fuchsia-500">send test email</button>
+    </form>
+  </Container>
+</section>

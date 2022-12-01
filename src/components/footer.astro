@@ -1,0 +1,11 @@
+---
+import Container from "./common/container.astro";
+
+import getCurrentYear from "../utils/get-current-year";
+---
+
+<footer class="bg-zinc-900 text-center">
+  <Container>
+    <p class="text-zinc-500">that's all folks! © {getCurrentYear()}</p>
+  </Container>
+</footer>
