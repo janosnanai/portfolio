@@ -25,8 +25,9 @@ export default async function sendEmail({
   });
 
   let info = await transporter.sendMail({
-    // from: `${name} ${email}`, // sender address
     from: { name, address: emailAddress }, // sender address
+    replyTo: emailAddress,
+    priority: "high",
     to: `${TARGET_EMAIL}, ${GOOGLE_EMAIL}`, // list of receivers
     subject: `Message from ${name} via your portfolio site 🚀`, // Subject line
     html: `<h1>${name} ${emailAddress}</h1><b>${message}</b>`, // html body
