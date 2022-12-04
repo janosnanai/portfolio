@@ -3,12 +3,43 @@ import Container from "./common/container.astro";
 import HeadingSecondary from "./common/heading-secondary.astro";
 ---
 
+<script>
+  function handleSubmit(e: SubmitEvent) {
+    e.preventDefault();
+    const targetEl = e.target;
+
+    if (!targetEl) return;
+
+    const myFormData = new FormData(targetEl as HTMLFormElement);
+    const myOutput = new Object();
+    for (const [name, value] of myFormData) {
+      Object.assign(myOutput, { [name]: value });
+    }
+
+    fetch("/api/post", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(myOutput),
+    });
+  }
+
+  const contactForm = document.getElementById("contact-form");
+
+  if (contactForm) {
+    contactForm.onsubmit = handleSubmit;
+  } else console.log("no form found");
+</script>
+
 <section class="bg-indigo-900">
   <Container>
     <HeadingSecondary>contact me</HeadingSecondary>
-    <form action="/api/post" method="post" target="_blank">
-      <p>contact form here</p>
-      <button class="p-2 bg-fuchsia-500">send test email</button>
+    <form id="contact-form" class="p-7">
+      <div class="flex flex-col gap-3">
+        <input name="name" type="text" />
+        <input name="emailAddress" type="text" />
+        <textarea name="message"></textarea>
+        <button class="p-2 bg-fuchsia-500">send test email</button>
+      </div>
     </form>
   </Container>
 </section>
