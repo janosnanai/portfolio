@@ -4,9 +4,10 @@ import HeadingSecondary from "./common/heading-secondary.astro";
 ---
 
 <script>
-  function handleSubmit(e: SubmitEvent) {
+  async function handleSubmit(e: SubmitEvent) {
     e.preventDefault();
     const targetEl = e.target;
+    const responseEl = document.getElementById("response");
 
     if (!targetEl) return;
 
@@ -16,11 +17,21 @@ import HeadingSecondary from "./common/heading-secondary.astro";
       Object.assign(myOutput, { [name]: value });
     }
 
-    fetch("/api/post", {
+    const res = await fetch("/api/post", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(myOutput),
     });
+
+    console.log(res);
+
+    if (!responseEl) return;
+
+    if (res.ok) {
+      responseEl.innerHTML = "message sent succesfully";
+    } else {
+      responseEl.innerHTML = "error while sending message";
+    }
   }
 
   const contactForm = document.getElementById("contact-form");
@@ -41,5 +52,6 @@ import HeadingSecondary from "./common/heading-secondary.astro";
         <button class="p-2 bg-fuchsia-500">send test email</button>
       </div>
     </form>
+    <p id="response"></p>
   </Container>
 </section>

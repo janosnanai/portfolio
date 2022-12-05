@@ -9,30 +9,35 @@ export default async function sendEmail({
   emailAddress: string;
   message: string;
 }) {
-  const TARGET_EMAIL = import.meta.env.TARGET_EMAIL;
-  const GOOGLE_EMAIL = import.meta.env.GOOGLE_EMAIL;
-  const GOOGLE_APP_PASSWORD = import.meta.env.GOOGLE_APP_PASSWORD;
+  const SMTP_HOST = import.meta.env.SMTP_HOST;
+  const EMAIL_CLIENT_ADDRESS = import.meta.env.EMAIL_CLIENT_ADDRESS;
+  const EMAIL_CLIENT_PASSWORD = import.meta.env.EMAIL_CLIENT_PASSWORD;
 
   const transporter = nodemailer.createTransport({
-    service: "gmail",
-    host: "smtp.gmail.com",
+    service: "SMTP",
+    host: SMTP_HOST,
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: GOOGLE_EMAIL,
-      pass: GOOGLE_APP_PASSWORD,
+      user: EMAIL_CLIENT_ADDRESS,
+      pass: EMAIL_CLIENT_PASSWORD,
     },
   });
 
-  let info = await transporter.sendMail({
-    from: { name, address: emailAddress }, // sender address
-    replyTo: emailAddress,
-    priority: "high",
-    to: `${TARGET_EMAIL}, ${GOOGLE_EMAIL}`, // list of receivers
-    subject: `Message from ${name} via your portfolio site 🚀`, // Subject line
-    html: `<h1>${name} ${emailAddress}</h1><b>${message}</b>`, // html body
-  });
+  let info;
 
-  console.log("Message sent: %s", info.messageId);
-  // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+  try {
+    info = await transporter.sendMail({
+      from: name,
+      // replyTo: emailAddress,
+      priority: "high",
+      to: EMAIL_CLIENT_ADDRESS,
+      subject: `${name} - via your portfolio site 🚀`,
+      text: message,
+      html: `<h1>${name} ${emailAddress}</h1><b>${message}</b>`,
+    });
+    console.log("Message sent: %s", info.messageId);
+  } catch (err: any) {
+    throw new Error(err.message ?? "Something went wrong.");
+  }
 }
