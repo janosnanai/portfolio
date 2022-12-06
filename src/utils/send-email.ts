@@ -34,7 +34,7 @@ export default async function sendEmail({
       to: EMAIL_CLIENT_ADDRESS,
       subject: `${name} - via your portfolio site 🚀`,
       text: message,
-      html: `<h1>${name} ${emailAddress}</h1><b>${message}</b>`,
+      html: `<h1>${name}</h1><address>${emailAddress}</address><p>${message}</p>`,
     });
     console.log("Message sent: %s", info.messageId);
   } catch (err: any) {
