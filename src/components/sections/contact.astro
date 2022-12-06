@@ -4,9 +4,11 @@ import HeadingSecondary from "../common/heading-secondary.astro";
 import ContactForm from "../contact-form.svelte";
 ---
 
-<section class="bg-indigo-900">
-  <Container>
-    <HeadingSecondary>contact me</HeadingSecondary>
-    <ContactForm client:load />
-  </Container>
+<section id="contact" class="bg-indigo-900">
+  <div class="p-7">
+    <Container>
+      <HeadingSecondary>contact me</HeadingSecondary>
+      <ContactForm client:load />
+    </Container>
+  </div>
 </section>

@@ -1,8 +1,18 @@
 ---
 import Anchor from "./common/anchor.astro";
-import Container from "./common/container.astro";
+
+const navItems = [
+  { href: "#about", title: "about" },
+  { href: "#projects", title: "projects" },
+  { href: "#contact", title: "contact" },
+];
 ---
 
-<Container>
-  <nav class="bg-transparent fixed"><Anchor href="#" title="hello" /></nav>
-</Container>
+<nav
+  class="absolute z-10 bg-transparent flex justify-between w-full container bottom-0 left-1/2 -translate-x-1/2 items-center"
+>
+  <Anchor href="#hero" title="janosnanai.dev" />
+  <div>
+    {navItems.map((navItem) => <Anchor {...navItem} />)}
+  </div>
+</nav>
