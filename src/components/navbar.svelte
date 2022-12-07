@@ -31,5 +31,6 @@
   .topfixed {
     position: fixed;
     top: 0;
+    bottom: auto;
   }
 </style>
