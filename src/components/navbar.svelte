@@ -9,7 +9,7 @@
 
 <header
   id="header"
-  class="absolute z-10 bg-transparent w-full bottom-0"
+  class="absolute z-10 bg-transparent w-full bottom-0 transition duration-300 border-b border-transparent"
   class:topfixed
 >
   <div class="flex justify-between items-center container mx-auto mt-1 mb-3">
@@ -29,8 +29,6 @@
 
 <style>
   .topfixed {
-    position: fixed;
-    top: 0;
-    bottom: auto;
+    @apply fixed top-0 bottom-auto bg-zinc-900/50 backdrop-blur-md border-zinc-700;
   }
 </style>
