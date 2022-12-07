@@ -31,7 +31,7 @@
 
 <section
   id="hero"
-  class="h-screen bg-zinc-900 flex flex-col items-center justify-center relative"
+  class="h-screen min-h-[20rem] bg-zinc-900 flex flex-col items-center justify-center relative"
 >
   <h1 class="text-zinc-50 text-6xl mb-7">
     <span class="block text-zinc-400 text-3xl mb-3">the personal site of</span>
@@ -41,7 +41,7 @@
   <Navbar {topfixed} />
   <div
     id="nav-guard"
-    class="-z-50 bg-transparent absolute bottom-0 h-0"
+    class="-z-50 bg-transparent absolute bottom-0 h-80"
     style:bottom={navGuardPosY}
   />
 </section>
