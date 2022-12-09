@@ -17,3 +17,6 @@ export const FOCUSABLE_ELEMENTS = [
   "[contenteditable]",
   '[tabindex]:not([tabindex^="-"])',
 ];
+
+export const STAR_COUNT = 800;
+export const STAR_SPEED = 0.1;

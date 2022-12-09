@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount, onDestroy } from "svelte";
   import Navbar from "../navbar.svelte";
+  import Starfield from "../starfield.svelte";
 
   let topfixed = false;
   let mousePos = { x: null as number | null, y: null as number | null };
@@ -45,8 +46,9 @@
 
 <section
   id="hero"
-  class="h-screen min-h-[20rem] bg-zinc-900 flex flex-col items-center justify-center relative overflow-hidden"
+  class="h-screen min-h-[20rem] bg-black flex flex-col items-center justify-center relative overflow-hidden"
 >
+  <Starfield />
   <div
     bind:clientWidth={w}
     bind:clientHeight={h}
@@ -67,10 +69,10 @@
         >engineer, full-stack developer</span
       >
     </div>
-    {#each [-60, -40, -20, 0, 20, 40, 60] as x ("gridX_" + x)}
+    {#each [-50, -30, -10, 10, 30, 50] as x ("gridX_" + x)}
       <div class="grid-line vertical" style={`right: ${x + 40}%;`} />
     {/each}
-    {#each [-20, 0, 20, 40] as y ("gridY_" + y)}
+    {#each [-25, -5, 15, 35] as y ("gridY_" + y)}
       <div class="grid-line horizontal" style={`top: ${(y * w) / h + 40}%;`} />
     {/each}
   </div>
@@ -86,7 +88,7 @@
   .hero-card {
     transform: perspective(800px) rotateX(var(--rot-x)) rotateY(var(--rot-y));
     transform-style: preserve-3d;
-    @apply p-20 duration-[50] relative mr-52 mt-16;
+    @apply p-20 relative mr-52 mt-16;
   }
   .grid-line {
     @apply absolute from-transparent via-violet-500 to-transparent -z-10;
@@ -98,6 +100,6 @@
   }
 
   .grid-line.horizontal {
-    @apply w-[200%] h-[1px] bg-gradient-to-r;
+    @apply w-[180%] h-[1px] bg-gradient-to-r;
   }
 </style>
