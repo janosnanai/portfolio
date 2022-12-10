@@ -18,5 +18,68 @@ export const FOCUSABLE_ELEMENTS = [
   '[tabindex]:not([tabindex^="-"])',
 ];
 
-export const STAR_COUNT = 800;
-export const STAR_SPEED = 0.1;
+export const STAR_COUNT = 720;
+export const STAR_SPEED = 0.08;
+
+export const PROJECTS: CardProps[] = [
+  {
+    title: "Tiny Slug Url Shortener",
+    image: "tsus",
+    description: "A tiny url shortener and QR code generator.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "HeadlessUI",
+      "Floating UI",
+      "Prisma",
+      "tRPC",
+      "Tanstack-Query",
+      "Jotai",
+      "React-Hook-Form",
+      "zod",
+      "NextAuth",
+      "PlaneScale",
+    ],
+    liveUrl: "https://www.tsus.vercel",
+    githubUrl: "https://github.com/janosnanai/tiny-slug-url-shortener",
+  },
+  {
+    title: "SchwiftyDB",
+    image: "tsus", //"schwiftydb"
+    description:
+      "Rick and Morty series wiki, tapping into The Rick and Morty API.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "HeadlessUI",
+      "GraphQL",
+      "Tanstack-Query",
+      "Jotai",
+    ],
+  },
+  {
+    title: "IP Tracker",
+    image: "ip-tracker",
+    description: "IP tracker app, based on a Frontend Mentor challenge.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "XState",
+      "nanostores",
+      "leaflet",
+    ],
+    liveUrl: "https://next-ip-tracker-kappa.vercel.app/",
+    githubUrl: "https://github.com/janosnanai/next-ip-tracker",
+  },
+  {
+    title: "Password Generator",
+    image: "password-generator",
+    description: "Password Generator app, a Frontend Mentor challenge.",
+    stack: ["React", "TypeScript", "TailwindCSS", "Vite"],
+    liveUrl: "https://ubiquitous-vacherin-5ba2aa.netlify.app/",
+    githubUrl: "https://github.com/janosnanai/password-generator",
+  },
+];

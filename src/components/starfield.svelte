@@ -24,6 +24,8 @@
   });
 
   function init() {
+    if (typeof window === "undefined") return;
+
     invariant(ctx, "Canvas context should not be null.");
     rafId > 0 && cancelAnimationFrame(rafId);
 

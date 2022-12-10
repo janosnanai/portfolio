@@ -59,8 +59,8 @@
     style:--rot-y={rotY}
   >
     <div>
-      <h1 class="text-zinc-50 text-6xl mb-5">
-        <span class="block text-zinc-400 text-3xl mb-3"
+      <h1 class="text-zinc-50 text-7xl mb-5">
+        <span class="block text-zinc-400 text-2xl mb-3"
           >the personal site of</span
         >
         <span class="block">János Nánai</span>
