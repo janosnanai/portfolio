@@ -2,6 +2,9 @@
 const { class: className } = Astro.props;
 ---
 
-<h2 class={`text-gigas-200 font-bold text-4xl uppercase ${className}`}>
-  <slot />
-</h2>
+<div class="flex items-center gap-3">
+  <div class="bg-scarpa-flow-500 h-0.5 w-1/12"></div>
+  <h2 class={`text-gigas-400 font-bold text-4xl uppercase ${className}`}>
+    <slot />
+  </h2>
+</div>
