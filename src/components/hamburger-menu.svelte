@@ -15,7 +15,7 @@
 <nav class="block sm:hidden">
   <button
     on:click={handleToggle}
-    class="text-zinc-400 bg-transparent p-2 mx-3 hover:bg-white/5 hover:text-zinc-100"
+    class="text-scarpa-flow-50 bg-transparent p-2 mx-3 hover:text-white transform duration-150 hover:scale-105"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

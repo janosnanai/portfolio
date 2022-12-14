@@ -73,7 +73,7 @@
 </script>
 
 <div
-  class="fixed z-10 inset-0 h-screen min-h-[20rem] bg-indigo-900/90"
+  class="fixed z-10 inset-0 h-screen min-h-[20rem] bg-gigas-900/90"
   bind:this={self}
   on:keydown={handleKeydown}
 >
@@ -82,18 +82,18 @@
     class="fixed top-5 right-5 text-zinc-400 p-2 text-xl bg-transparent hover:bg-white/5 hover:text-zinc-100"
     >close</button
   >
-  <div class="h-full flex flex-col items-center justify-center">
-    <a
-      href="#hero"
-      on:click={handleClose}
-      class="text-zinc-50 text-2xl p-2 mx-3 mb-5">janosnanai.dev</a
+  <div class="h-full flex flex-col items-center justify-center gap-5">
+    <a href="#hero" on:click={handleClose} class="text-white text-2xl p-2 mx-3"
+      >janosnanai<span class="text-trinidad font-bold">.</span><span
+        class="text-scarpa-flow-200">dev</span
+      ></a
     >
     <nav class="flex flex-col gap-3 items-center">
       {#each NAV_ITEMS as { href, title }}
         <a
           {href}
           on:click={handleClose}
-          class="text-zinc-400 p-2 text-xl bg-transparent hover:bg-white/5 hover:text-zinc-100"
+          class="inline-block uppercase text-scarpa-flow-50 p-2 text-xl hover:text-white transform duration-150 hover:scale-105 hover:-translate-y-0.5"
         >
           {title}
         </a>

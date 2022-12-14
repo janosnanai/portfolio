@@ -39,14 +39,14 @@ export const PROJECTS: CardProps[] = [
       "React-Hook-Form",
       "zod",
       "NextAuth",
-      "PlaneScale",
+      "PlanetScale",
     ],
-    liveUrl: "https://www.tsus.vercel",
+    liveUrl: "https://tsus.vercel.app",
     githubUrl: "https://github.com/janosnanai/tiny-slug-url-shortener",
   },
   {
     title: "SchwiftyDB",
-    image: "tsus", //"schwiftydb"
+    image: "schwiftydb",
     description:
       "Rick and Morty series wiki, tapping into The Rick and Morty API.",
     stack: [
@@ -58,6 +58,8 @@ export const PROJECTS: CardProps[] = [
       "Tanstack-Query",
       "Jotai",
     ],
+    liveUrl: "https://schwiftydb.vercel.app/",
+    githubUrl: "https://github.com/janosnanai/schwifty-db",
   },
   {
     title: "IP Tracker",

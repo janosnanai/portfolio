@@ -10,12 +10,16 @@
   class:topfixed
 >
   <div class="flex justify-between items-center container mx-auto mt-1 mb-3">
-    <a href="#hero" class="text-zinc-50 text-2xl p-2 mx-3">janosnanai.dev</a>
-    <nav class="hidden sm:block mx-3">
+    <a href="#hero" class="text-white text-2xl p-2 mx-3"
+      >janosnanai<span class="text-trinidad font-bold">.</span><span
+        class="text-scarpa-flow-200">dev</span
+      ></a
+    >
+    <nav class="hidden sm:flex gap-3 mx-3">
       {#each NAV_ITEMS as { href, title }}
         <a
           {href}
-          class="text-zinc-400 p-2 text-xl bg-transparent hover:bg-white/5 hover:text-zinc-100"
+          class="inline-block uppercase text-scarpa-flow-50 p-2 text-xl hover:text-white transform duration-150 hover:scale-105 hover:-translate-y-0.5"
         >
           {title}
         </a>
@@ -27,6 +31,6 @@
 
 <style>
   .topfixed {
-    @apply fixed top-0 bottom-auto bg-zinc-900/50 backdrop-blur-md border-zinc-700;
+    @apply fixed top-0 bottom-auto bg-scarpa-flow-800/75 backdrop-blur-md;
   }
 </style>

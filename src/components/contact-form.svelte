@@ -32,21 +32,24 @@
       id="name"
       type="text"
       placeholder="your name"
-      class="bg-transparent border-b p-2"
+      class="bg-transparent border-b border-scarpa-flow-500 text-white placeholder:text-scarpa-flow-300 p-2"
     />
     <input
       bind:value={emailAddress}
       id="email-address"
       type="text"
       placeholder="your email"
-      class="bg-transparent border-b p-2"
+      class="bg-transparent border-b border-scarpa-flow-500 text-white placeholder:text-scarpa-flow-300 p-2"
     />
     <textarea
       bind:value={message}
       id="message"
       placeholder="your message"
-      class="p-2 bg-black/5 border-b min-h-[3rem] max-h-[9rem]"
+      class="p-2 bg-black/5 border-b border-scarpa-flow-500 text-white placeholder:text-scarpa-flow-300 min-h-[3rem] max-h-[9rem]"
     />
-    <button class="p-2 bg-fuchsia-500" type="submit">send test email</button>
+    <button
+      class="p-2 bg-trinidad text-white uppercase font-semibold hover:bg-trinidad-600 transform duration-150"
+      type="submit">send email</button
+    >
   </div>
 </form>

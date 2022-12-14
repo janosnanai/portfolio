@@ -59,22 +59,23 @@
     style:--rot-y={rotY}
   >
     <div>
-      <h1 class="text-zinc-50 text-7xl mb-5">
-        <span class="block text-zinc-400 text-2xl mb-3"
+      <h1 class="text-7xl mb-5">
+        <span class="block text-sirocco-300/50 text-2xl mb-2.5"
           >the personal site of</span
         >
-        <span class="block">János Nánai</span>
+        <span class="block text-sirocco-50">János Nánai</span>
       </h1>
-      <span class="block text-yellow-500 uppercase text-sm"
+      <div class="w-1/3 h-1 bg-gigas-500 mb-3.5" />
+      <span class="block text-sirocco-100/50 uppercase text-sm"
         >engineer, full-stack developer</span
       >
     </div>
-    {#each [-50, -30, -10, 10, 30, 50] as x ("gridX_" + x)}
+    <!-- {#each [-50, -30, -10, 10, 30, 50] as x ("gridX_" + x)}
       <div class="grid-line vertical" style={`right: ${x + 40}%;`} />
     {/each}
     {#each [-25, -5, 15, 35] as y ("gridY_" + y)}
       <div class="grid-line horizontal" style={`top: ${(y * w) / h + 40}%;`} />
-    {/each}
+    {/each} -->
   </div>
   <Navbar {topfixed} />
   <div
@@ -90,7 +91,7 @@
     transform-style: preserve-3d;
     @apply p-20 relative mr-52 mt-16;
   }
-  .grid-line {
+  /* .grid-line {
     @apply absolute from-transparent via-violet-500 to-transparent -z-10;
     @apply -translate-y-2/3;
     @apply -translate-x-1/4;
@@ -101,5 +102,5 @@
 
   .grid-line.horizontal {
     @apply w-[180%] h-[1px] bg-gradient-to-r;
-  }
+  } */
 </style>
