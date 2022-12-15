@@ -98,7 +98,7 @@
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"
-      class="w-7 h-7 text-dodger-blue-500"
+      class="w-7 h-7 text-international-orange"
     >
       <path
         stroke-linecap="round"

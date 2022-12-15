@@ -6,7 +6,7 @@ import { Image } from "@astrojs/image/components";
 ---
 
 <article
-  class="group bg-fiord-50 rounded-sm p-7 w-full max-w-5xl shadow hover:shadow-md hover:shadow-international-orange-500/30 transform duration-300"
+  class="group bg-fiord-50 dark:bg-outer-space rounded-sm p-7 w-full max-w-5xl shadow hover:shadow-md hover:shadow-international-orange-500/30 transform duration-300"
 >
   <div class="flex justify-between gap-7">
     <div class="flex flex-col justify-between">
@@ -17,23 +17,34 @@ import { Image } from "@astrojs/image/components";
         <div class="flex gap-2 flex-wrap mb-5">
           {
             stack.map((stackItem) => (
-              <span class="inline-block bg-gallery-600 text-white px-2 py-0.5 text-sm">
+              <span class="inline-block bg-gallery-600 dark:bg-gallery-400 text-white dark:text-black px-2 py-0.5 text-sm">
                 {stackItem}
               </span>
             ))
           }
         </div>
         <div class="mb-7">
-          <p class="text-outer-space-900 font-semibold text-xl leading-relaxed">
+          <p
+            class="text-outer-space-900 dark:text-outer-space-50 font-semibold text-xl leading-relaxed"
+          >
             {description}
           </p>
         </div>
       </div>
 
       <div class="space-x-3">
-        <a href={liveUrl} target="_blank" class="link link-primary">live demo</a
+        <a
+          href={liveUrl}
+          target="_blank"
+          class="link text-white bg-international-orange hover:bg-international-orange-600 border-transparent"
+          >live demo</a
         >
-        <a href={githubUrl} target="_blank" class="link link-secondary">code</a>
+        <a
+          href={githubUrl}
+          target="_blank"
+          class="link text-outer-space dark:text-gallery-300 hover:text-black dark:hover:text-white bg-transparent border-outer-space dark:border-gallery-300 hover:border-black dark:hover:border-white"
+          >code</a
+        >
       </div>
     </div>
     <div
@@ -44,7 +55,7 @@ import { Image } from "@astrojs/image/components";
         alt={`screenshot image of ${title}`}
         width={320}
         height={320}
-        class="group-hover:scale-[1.02] transform duration-[3000ms]"
+        class="group-hover:scale-[1.02] transition duration-[3000ms]"
       />
     </div>
   </div>
@@ -52,13 +63,6 @@ import { Image } from "@astrojs/image/components";
 
 <style>
   .link {
-    @apply px-3 py-1 uppercase font-semibold inline-block border-2 border-transparent rounded-sm transform duration-150;
-  }
-  .link-primary {
-    @apply text-white bg-international-orange hover:bg-international-orange-600;
-  }
-
-  .link-secondary {
-    @apply text-outer-space hover:text-black bg-transparent border-outer-space hover:border-black;
+    @apply px-3 py-1 uppercase font-semibold inline-block border-2 rounded-sm transition duration-150;
   }
 </style>

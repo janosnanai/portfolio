@@ -73,7 +73,7 @@
 </script>
 
 <div
-  class="fixed z-10 inset-0 h-screen min-h-[20rem] bg-outer-space/90"
+  class="fixed z-10 inset-0 h-screen min-h-[20rem] bg-outer-space-900/90 backdrop-blur-lg"
   bind:this={self}
   on:keydown={handleKeydown}
 >

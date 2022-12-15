@@ -27,14 +27,26 @@
 
 <form on:submit|preventDefault={handleSubmit} class="p-7 max-w-3xl m-auto">
   <div class="flex flex-col gap-3">
-    <input bind:value={name} id="name" type="text" placeholder="your name" />
+    <input
+      bind:value={name}
+      id="name"
+      type="text"
+      placeholder="your name"
+      class="dark:text-white dark:placeholder:text-outer-space-400 dark:border-outer-space-400"
+    />
     <input
       bind:value={emailAddress}
       id="email-address"
       type="text"
       placeholder="your email"
+      class="dark:text-white dark:placeholder:text-outer-space-400 dark:border-outer-space-400"
     />
-    <textarea bind:value={message} id="message" placeholder="your message" />
+    <textarea
+      bind:value={message}
+      id="message"
+      placeholder="your message"
+      class="dark:text-white dark:placeholder:text-outer-space-400 dark:border-outer-space-400"
+    />
     <button
       class="p-2 bg-international-orange-500 text-white uppercase font-semibold hover:bg-international-orange-500 transform duration-150"
       type="submit">send email</button
