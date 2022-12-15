@@ -13,7 +13,7 @@
   }
 </script>
 
-<nav class="block sm:hidden" class:topfixed>
+<nav class="block sm:hidden pr-5" class:topfixed>
   <button
     on:click={handleToggle}
     class="text-outer-space-50 hover:text-white p-2 mx-3 transform duration-150 hover:scale-105"
@@ -24,7 +24,7 @@
       viewBox="0 0 24 24"
       stroke-width="2"
       stroke="currentColor"
-      class="w-6 h-6"
+      class="w-7 h-7"
     >
       <path
         stroke-linecap="round"
