@@ -25,31 +25,29 @@
   }
 </script>
 
-<form on:submit|preventDefault={handleSubmit} class="p-7">
+<form on:submit|preventDefault={handleSubmit} class="p-7 max-w-3xl m-auto">
   <div class="flex flex-col gap-3">
-    <input
-      bind:value={name}
-      id="name"
-      type="text"
-      placeholder="your name"
-      class="bg-transparent border-b border-scarpa-flow-500 text-white placeholder:text-scarpa-flow-300 p-2"
-    />
+    <input bind:value={name} id="name" type="text" placeholder="your name" />
     <input
       bind:value={emailAddress}
       id="email-address"
       type="text"
       placeholder="your email"
-      class="bg-transparent border-b border-scarpa-flow-500 text-white placeholder:text-scarpa-flow-300 p-2"
     />
-    <textarea
-      bind:value={message}
-      id="message"
-      placeholder="your message"
-      class="p-2 bg-black/5 border-b border-scarpa-flow-500 text-white placeholder:text-scarpa-flow-300 min-h-[3rem] max-h-[9rem]"
-    />
+    <textarea bind:value={message} id="message" placeholder="your message" />
     <button
-      class="p-2 bg-trinidad text-white uppercase font-semibold hover:bg-trinidad-600 transform duration-150"
+      class="p-2 bg-international-orange-500 text-white uppercase font-semibold hover:bg-international-orange-500 transform duration-150"
       type="submit">send email</button
     >
   </div>
 </form>
+
+<style>
+  input {
+    @apply bg-transparent border-b border-outer-space text-black placeholder:text-outer-space-700 p-2;
+  }
+
+  textarea {
+    @apply p-2 bg-black/5 border-b border-outer-space text-black placeholder:text-outer-space-700 min-h-[3rem] max-h-[9rem];
+  }
+</style>

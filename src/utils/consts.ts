@@ -48,7 +48,7 @@ export const PROJECTS: CardProps[] = [
     title: "SchwiftyDB",
     image: "schwiftydb",
     description:
-      "Rick and Morty series wiki, tapping into The Rick and Morty API.",
+      "Rick and Morty series wiki, tapping into an open-source API.",
     stack: [
       "Next.js",
       "TypeScript",

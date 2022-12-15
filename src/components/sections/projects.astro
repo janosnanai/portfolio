@@ -5,9 +5,9 @@ import HeadingSecondary from "../common/heading-secondary.astro";
 import { PROJECTS } from "../../utils/consts";
 ---
 
-<section id="projects" class="bg-scarpa-flow-800">
+<section id="projects" class="bg-gallery">
   <Container>
-    <div class="px-7 py-20">
+    <div class="px-7 py-28">
       <HeadingSecondary>featured projects</HeadingSecondary>
       <div class="flex flex-col gap-7 items-center mt-7">
         {PROJECTS.map((project) => <Card {...project} />)}

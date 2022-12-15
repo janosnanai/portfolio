@@ -81,13 +81,13 @@
     >
       <div class="hero-card--front z-10">
         <h1 class="text-7xl mb-5">
-          <span class="block text-sirocco-300/50 text-2xl mb-2.5"
+          <span class="block text-white text-2xl mb-2.5"
             >the personal site of</span
           >
-          <span class="block text-sirocco-50">János Nánai</span>
+          <span class="block text-white">János Nánai</span>
         </h1>
         <!-- <div class="w-1/3 h-1 bg-gigas-500 mb-3.5" /> -->
-        <span class="block text-trinidad-400 uppercase text-sm"
+        <span class="block text-international-orange-500 uppercase text-sm"
           >engineer, full-stack developer</span
         >
       </div>
@@ -124,7 +124,7 @@
   }
 
   .grid-line {
-    @apply absolute from-transparent via-gigas-400/90 to-transparent -z-10;
+    @apply absolute from-transparent via-dodger-blue-400 to-transparent -z-10;
     @apply -translate-x-1/4 -translate-y-2/3;
   }
   .grid-line.vertical {

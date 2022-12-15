@@ -73,19 +73,32 @@
 </script>
 
 <div
-  class="fixed z-10 inset-0 h-screen min-h-[20rem] bg-gigas-900/90"
+  class="fixed z-10 inset-0 h-screen min-h-[20rem] bg-outer-space/90"
   bind:this={self}
   on:keydown={handleKeydown}
 >
   <button
     on:click={handleClose}
-    class="fixed top-5 right-5 text-zinc-400 p-2 text-xl bg-transparent hover:bg-white/5 hover:text-zinc-100"
-    >close</button
-  >
+    class="fixed top-5 right-5 text-international-orange-500 p-2 hover:text-international-orange-400 hover:scale-105 transform duration-150"
+    ><svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="2"
+      stroke="currentColor"
+      class="w-9 h-9"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M6 18L18 6M6 6l12 12"
+      />
+    </svg>
+  </button>
   <div class="h-full flex flex-col items-center justify-center gap-5">
     <a href="#hero" on:click={handleClose} class="text-white text-2xl p-2 mx-3"
-      >janosnanai<span class="text-trinidad font-bold">.</span><span
-        class="text-scarpa-flow-200">dev</span
+      >janosnanai<span class="text-international-orange font-bold">.</span><span
+        class="text-ziggurat">dev</span
       ></a
     >
     <nav class="flex flex-col gap-3 items-center">
@@ -93,7 +106,7 @@
         <a
           {href}
           on:click={handleClose}
-          class="inline-block uppercase text-scarpa-flow-50 p-2 text-xl hover:text-white transform duration-150 hover:scale-105 hover:-translate-y-0.5"
+          class="inline-block uppercase text-white p-2 text-xl hover:text-white transform duration-150 hover:scale-105 hover:-translate-y-0.5"
         >
           {title}
         </a>

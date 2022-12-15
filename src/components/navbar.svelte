@@ -10,27 +10,39 @@
   class:topfixed
 >
   <div class="flex justify-between items-center container mx-auto mt-1 mb-3">
-    <a href="#hero" class="text-white text-2xl p-2 mx-3"
-      >janosnanai<span class="text-trinidad font-bold">.</span><span
-        class="text-scarpa-flow-200">dev</span
-      ></a
+    <a href="#hero" class="text-white text-2xl font-semibold p-2 mx-3"
+      >janosnanai<span class="text-international-orange font-bold text-4xl"
+        >.</span
+      ><span id="dev-span" class="text-ziggurat">dev</span></a
     >
     <nav class="hidden sm:flex gap-3 mx-3">
       {#each NAV_ITEMS as { href, title }}
         <a
           {href}
-          class="inline-block uppercase text-scarpa-flow-50 p-2 text-xl hover:text-white transform duration-150 hover:scale-105 hover:-translate-y-0.5"
+          class="inline-block uppercase text-white p-2 text-xl hover:text-white transform duration-150 hover:scale-105 hover:-translate-y-0.5"
         >
           {title}
         </a>
       {/each}
     </nav>
-    <HamburgerMenu />
+    <HamburgerMenu bind:topfixed />
   </div>
 </header>
 
 <style>
   .topfixed {
-    @apply fixed top-0 bottom-auto bg-scarpa-flow-800/75 backdrop-blur-md;
+    @apply fixed top-0 bottom-auto bg-ziggurat/90 backdrop-blur-lg border-b border-ziggurat-400 shadow;
+  }
+
+  .topfixed a[href="#hero"] {
+    @apply text-black dark:text-white;
+  }
+
+  .topfixed nav > a {
+    @apply text-outer-space dark:text-outer-space-50 hover:text-black dark:hover:text-white;
+  }
+
+  .topfixed #dev-span {
+    @apply text-outer-space dark:text-ziggurat;
   }
 </style>
