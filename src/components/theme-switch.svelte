@@ -67,7 +67,7 @@
 
 <button
   on:click={toggleTheme}
-  class="-ml-14 origin-right scale-0 transition-all duration-300 h-7 w-7 overflow-hidden"
+  class="-ml-12 origin-right scale-0 transition-all duration-300 h-7 w-7 overflow-hidden"
   class:topfixed
   aria-hidden
 >

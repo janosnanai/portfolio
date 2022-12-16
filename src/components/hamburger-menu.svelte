@@ -13,10 +13,10 @@
   }
 </script>
 
-<nav class="block sm:hidden pr-5" class:topfixed>
+<nav class="block sm:hidden" class:topfixed>
   <button
     on:click={handleToggle}
-    class="text-outer-space-50 hover:text-white p-2 mx-3 transform duration-150 hover:scale-105"
+    class="text-outer-space-50 hover:text-white p-2 transition duration-150 hover:scale-105"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

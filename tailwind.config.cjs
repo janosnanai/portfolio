@@ -9,6 +9,11 @@ module.exports = {
       fontFamily: {
         sans: ["'InterVariable'", ...defaultTheme.fontFamily.sans],
       },
+      screens: {
+        "mobile-lg": "400px",
+        "mobile-md": "360px",
+        "mobile-sm": "280px",
+      },
       colors: {
         "international-orange": {
           DEFAULT: "#FF530D",

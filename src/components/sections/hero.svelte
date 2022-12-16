@@ -69,7 +69,9 @@
   class="h-screen min-h-[20rem] bg-black relative overflow-hidden"
 >
   <Starfield />
-  <div class="absolute bottom-1/4 left-1/4 -ml-24">
+  <div
+    class="absolute bottom-1/3 md:bottom-1/4 left-1/3 md:left-1/4 -ml-16 mobile-md:-ml-24"
+  >
     <div
       class="hero-card relative"
       bind:clientWidth={headingWidth}
@@ -80,14 +82,15 @@
       style:--offset-x={offset_x}
     >
       <div class="hero-card--front z-10">
-        <h1 class="text-7xl mb-5">
-          <span class="block text-white text-2xl mb-2.5"
+        <h1 class="text-4xl mobile-md:text-5xl lg:text-7xl mb-2 mobile-md:mb-5">
+          <span
+            class="block text-white text-base mobile-md:text-lg md:text-xl lg:text-2xl mb-1 mobile-md:mb-2.5"
             >the personal site of</span
           >
           <span class="block text-white">János Nánai</span>
         </h1>
-        <!-- <div class="w-1/3 h-1 bg-gigas-500 mb-3.5" /> -->
-        <span class="block text-international-orange-500 uppercase text-sm"
+        <span
+          class="block text-international-orange-500 uppercase text-[0.68rem] mobile-md:text-xs md:text-sm"
           >engineer, full-stack developer</span
         >
       </div>
@@ -112,7 +115,7 @@
 
 <style>
   .hero-card {
-    @apply p-20 relative mr-52 mt-16;
+    @apply px-4 py-6 mobile-lg:p-10 md:p-20 relative md:mr-52 mt-16;
     transform: perspective(800px) rotateX(var(--rot-x)) rotateY(var(--rot-y))
       translate(var(--offset-x), var(--offset-y));
     transform-style: preserve-3d;
@@ -125,13 +128,13 @@
 
   .grid-line {
     @apply absolute from-transparent via-dodger-blue-400 to-transparent -z-10;
-    @apply -translate-x-1/4 -translate-y-2/3;
+    @apply -translate-x-[20%] mobile-lg:-translate-x-1/4 -translate-y-3/4 mobile-lg:-translate-y-2/3;
   }
   .grid-line.vertical {
-    @apply w-[1px] h-[180%] bg-gradient-to-t;
+    @apply w-[1px] h-[150%] md:h-[180%] bg-gradient-to-t;
   }
 
   .grid-line.horizontal {
-    @apply w-[180%] h-[1px] bg-gradient-to-r;
+    @apply w-[150%] md:w-[180%] h-[1px] bg-gradient-to-r;
   }
 </style>

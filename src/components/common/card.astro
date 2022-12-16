@@ -6,12 +6,16 @@ import { Image } from "@astrojs/image/components";
 ---
 
 <article
-  class="group bg-fiord-50 dark:bg-outer-space rounded-sm p-7 w-full max-w-5xl shadow hover:shadow-md hover:shadow-international-orange-500/30 transform duration-300"
+  class="group bg-fiord-50 dark:bg-outer-space rounded-sm p-3 mobile-lg:p-7 w-full max-w-5xl shadow hover:shadow-md hover:shadow-international-orange-500/30 transform duration-300"
 >
-  <div class="flex justify-between gap-7">
+  <div
+    class="flex flex-col-reverse md:flex-row items-start justify-between gap-7"
+  >
     <div class="flex flex-col justify-between">
       <div>
-        <h3 class="text-4xl font-thin text-black dark:text-white mb-5">
+        <h3
+          class="text-3xl mobile-lg:text-4xl font-thin text-black dark:text-white mb-5"
+        >
           {title}
         </h3>
         <div class="flex gap-2 flex-wrap mb-5">
@@ -25,14 +29,14 @@ import { Image } from "@astrojs/image/components";
         </div>
         <div class="mb-7">
           <p
-            class="text-outer-space-900 dark:text-outer-space-50 font-semibold text-xl leading-relaxed"
+            class="text-outer-space-900 dark:text-outer-space-50 font-semibold text-base mobile-md:text-lg mobile-lg:text-xl leading-relaxed"
           >
             {description}
           </p>
         </div>
       </div>
 
-      <div class="space-x-3">
+      <div class="flex gap-3 flex-wrap">
         <a
           href={liveUrl}
           target="_blank"
@@ -48,14 +52,14 @@ import { Image } from "@astrojs/image/components";
       </div>
     </div>
     <div
-      class="min-h-max min-w-max overflow-hidden border border-fiord shadow rounded-sm"
+      class="w-full md:min-h-[50%] md:min-w-[50%] md:max-h-[50%] md:max-w-[50%] overflow-hidden border border-fiord shadow rounded-sm"
     >
       <Image
         src={import(`../../images/${image}.webp`)}
         alt={`screenshot image of ${title}`}
-        width={320}
-        height={320}
-        class="group-hover:scale-[1.02] transition duration-[3000ms]"
+        width={640}
+        height={640}
+        class="group-hover:scale-[1.02] transition duration-[3000ms] w-full"
       />
     </div>
   </div>

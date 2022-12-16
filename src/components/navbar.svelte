@@ -7,15 +7,17 @@
 
 <header
   id="header"
-  class={`absolute z-10 w-full bottom-0 transition duration-300 border-b border-transparent ${
-    topfixed ? "bg-gallery/90 dark:bg-outer-space-900/90 border-ziggurat-400 shadow dark:border-outer-space" : "bg-transparent"
+  class={`absolute px-2 mobile-lg:px-7 z-10 w-full bottom-0 transition duration-300 border-b border-transparent ${
+    topfixed
+      ? "bg-gallery/90 dark:bg-outer-space-900/90 border-ziggurat-400 shadow dark:border-outer-space"
+      : "bg-transparent"
   }`}
   class:topfixed
 >
-  <div class="flex justify-between items-center container mx-auto mt-1 mb-3">
+  <div class="flex justify-between items-center sm:container mx-auto">
     <a
       href="#hero"
-      class={`text-2xl font-semibold p-2 mx-3 ${
+      class={`text-2xl font-semibold p-2 mb-2 ${
         topfixed ? "text-black dark:text-white" : "text-white"
       }`}
       >janosnanai<span class="text-international-orange font-bold text-4xl"
@@ -27,7 +29,7 @@
           : "text-ziggurat"}>dev</span
       ></a
     >
-    <div class="flex items-center mx-3">
+    <div class="flex items-center">
       <nav class="hidden sm:flex gap-3 pr-5">
         {#each NAV_ITEMS as { href, title }}
           <a
