@@ -4,11 +4,7 @@ export default async function sendEmail({
   name,
   emailAddress,
   message,
-}: {
-  name: string;
-  emailAddress: string;
-  message: string;
-}) {
+}: IEmailMessage) {
   const SMTP_HOST = import.meta.env.SMTP_HOST;
   const EMAIL_CLIENT_ADDRESS = import.meta.env.EMAIL_CLIENT_ADDRESS;
   const EMAIL_CLIENT_PASSWORD = import.meta.env.EMAIL_CLIENT_PASSWORD;
@@ -29,15 +25,16 @@ export default async function sendEmail({
   try {
     info = await transporter.sendMail({
       from: name,
-      // replyTo: emailAddress,
+      //replyTo: emailAddress,
       priority: "high",
       to: EMAIL_CLIENT_ADDRESS,
       subject: `${name} - via your portfolio site 🚀`,
       text: message,
       html: `<h1>${name}</h1><address>${emailAddress}</address><p>${message}</p>`,
     });
-    console.log("Message sent: %s", info.messageId);
+    // console.log("Message sent: %s", info.messageId);
   } catch (err: any) {
+    // console.log("Error:", err ?? "unknown error");
     throw new Error(err.message ?? "Something went wrong.");
   }
 }
