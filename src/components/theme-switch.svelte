@@ -15,8 +15,6 @@
     root = document.querySelector("html");
     mode = getPersistedTheme() ?? THEMES.LIGHT;
     setTheme();
-
-    console.log("onmount ran");
   });
 
   function getPersistedTheme() {
@@ -50,8 +48,6 @@
     localStorage.setItem("theme", mode);
 
     setTheme();
-
-    console.log(mode, root);
   }
 
   function setTheme() {
@@ -80,7 +76,7 @@
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      stroke-width="2"
+      stroke-width="1.5"
       stroke="currentColor"
       class="w-7 h-7 text-international-orange-500 animate-[spin_30s_linear_infinite]"
     >
@@ -96,7 +92,7 @@
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      stroke-width="2"
+      stroke-width="1.5"
       stroke="currentColor"
       class="w-7 h-7 text-international-orange"
     >
