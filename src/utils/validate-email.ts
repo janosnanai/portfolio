@@ -2,9 +2,9 @@ export default function validateEmail({
   name,
   emailAddress,
   message,
-}: IEmailMessage) {
+}: I_EmailMessage) {
   let valid = true;
-  const errors: IValidationErrorMessage = {
+  const errors: I_ValidationErrorMessage = {
     name: null,
     emailAddress: null,
     message: null,

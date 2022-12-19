@@ -7,14 +7,16 @@ interface CardProps {
   image?: string;
 }
 
-interface IEmailMessage {
+interface I_EmailMessage {
   name: string;
   emailAddress: string;
   message: string;
 }
 
-interface IValidationErrorMessage {
+interface I_ValidationErrorMessage {
   name: string | null;
   emailAddress: string | null;
   message: string | null;
 }
+
+type T_Images = Record<string, () => Promise<any>> | null;

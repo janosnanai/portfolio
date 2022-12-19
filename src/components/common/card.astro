@@ -1,9 +1,13 @@
 ---
+import { Image } from "@astrojs/image/components";
+
 const { title, image, description, stack, githubUrl, liveUrl } =
   Astro.props as CardProps;
 
-import { Image } from "@astrojs/image/components";
+const imagePath = `/images/${image}.webp`;
 ---
+
+<p class="text-white">{imagePath}</p>
 
 <article
   class="group bg-gallery-50 dark:bg-gallery-800 rounded-lg p-3 mobile-lg:p-7 w-full max-w-5xl shadow hover:shadow-md hover:shadow-international-orange-500/30 transform duration-300"
@@ -55,10 +59,11 @@ import { Image } from "@astrojs/image/components";
       class="w-full md:min-h-[50%] md:min-w-[50%] md:max-h-[50%] md:max-w-[50%] overflow-hidden border border-fiord shadow rounded-lg"
     >
       <Image
-        src={import(`../../images/${image}.webp`)}
+        src={imagePath}
         alt={`screenshot image of ${title}`}
         width={640}
         height={640}
+        format="webp"
         class="group-hover:scale-[1.02] transition duration-[3000ms] w-full"
       />
     </div>

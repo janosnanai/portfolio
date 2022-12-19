@@ -4,7 +4,7 @@ export default async function sendEmail({
   name,
   emailAddress,
   message,
-}: IEmailMessage) {
+}: I_EmailMessage) {
   const SMTP_HOST = import.meta.env.SMTP_HOST;
   const EMAIL_CLIENT_ADDRESS = import.meta.env.EMAIL_CLIENT_ADDRESS;
   const EMAIL_CLIENT_PASSWORD = import.meta.env.EMAIL_CLIENT_PASSWORD;
