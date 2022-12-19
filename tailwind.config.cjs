@@ -94,6 +94,9 @@ module.exports = {
           900: "#151C20",
         },
       },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      },
     },
   },
   plugins: [],

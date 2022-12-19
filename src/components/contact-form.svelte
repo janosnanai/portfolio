@@ -98,8 +98,8 @@
     </div>
     <button
       disabled={!$messageForm.valid || sendStatus === "sending"}
-      class="p-2 mt-7 bg-international-orange-500 disabled:bg-gallery-600 text-white uppercase font-semibold hover:bg-international-orange-500 transition duration-150"
-      type="submit">send email</button
+      class="p-2 mt-7 bg-international-orange-500 disabled:bg-gallery-600 text-white uppercase font-semibold hover:bg-international-orange-500 transition duration-150 rounded-lg"
+      type="submit">send</button
     >
   </div>
 

@@ -3,7 +3,10 @@ import Container from "../common/container.astro";
 import HeadingSecondary from "../common/heading-secondary.astro";
 ---
 
-<section id="about" class="bg-ziggurat dark:bg-fiord-800">
+<section
+  id="about"
+  class="bg-gradient-radial from-ziggurat to-bg-gallery-200 dark:from-outer-space dark:to-gallery-800"
+>
   <Container>
     <div class="px-7 py-28">
       <HeadingSecondary>about</HeadingSecondary>
@@ -23,7 +26,7 @@ import HeadingSecondary from "../common/heading-secondary.astro";
           </div>
           <div class="flex justify-around">
             <a
-              class="link hover:scale-105 text-ziggurat-700 dark:text-fiord-300 hover:text-black dark:hover:text-white"
+              class="link hover:scale-105 text-gallery-700 dark:text-gallery-300 hover:text-black dark:hover:text-white"
               href="https://github.com/janosnanai"
               target="_blank"
             >
@@ -38,7 +41,7 @@ import HeadingSecondary from "../common/heading-secondary.astro";
               </svg>
             </a>
             <a
-              class="link hover:scale-105 text-ziggurat-700 dark:text-fiord-300 hover:text-black dark:hover:text-white"
+              class="link hover:scale-105 text-gallery-700 dark:text-gallery-300 hover:text-black dark:hover:text-white"
               href="#"
               target="_blank"
               ><svg
@@ -60,7 +63,7 @@ import HeadingSecondary from "../common/heading-secondary.astro";
 
 <style>
   .link {
-    @apply px-5 py-2 uppercase font-semibold text-lg inline-block rounded-sm transform duration-150;
+    @apply px-5 py-2 uppercase font-semibold text-lg inline-block rounded-lg transform duration-150;
   }
   .link-primary {
     @apply text-white bg-international-orange hover:bg-international-orange-600;

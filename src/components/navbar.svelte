@@ -9,7 +9,7 @@
   id="header"
   class={`absolute px-2 mobile-lg:px-7 z-10 w-full bottom-0 transition duration-300 border-b border-transparent ${
     topfixed
-      ? "bg-gallery/90 dark:bg-outer-space-900/90 border-ziggurat-400 shadow dark:border-outer-space"
+      ? "bg-gallery/90 dark:bg-gallery-900/90 border-ziggurat-400 shadow dark:border-outer-space"
       : "bg-transparent"
   }`}
   class:topfixed
