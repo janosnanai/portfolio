@@ -1,6 +1,4 @@
 ---
-import { Image } from "@astrojs/image/components";
-
 const { title, image, description, stack, githubUrl, liveUrl } =
   Astro.props as CardProps;
 
@@ -58,12 +56,11 @@ const imagePath = `/images/${image}.webp`;
     <div
       class="w-full md:min-h-[50%] md:min-w-[50%] md:max-h-[50%] md:max-w-[50%] overflow-hidden border border-fiord shadow rounded-lg"
     >
-      <Image
+      <img
         src={imagePath}
         alt={`screenshot image of ${title}`}
         width={640}
         height={640}
-        format="webp"
         class="group-hover:scale-[1.02] transition duration-[3000ms] w-full"
       />
     </div>
