@@ -8,6 +8,7 @@ export default async function sendEmail({
   const SMTP_HOST = import.meta.env.SMTP_HOST;
   const EMAIL_CLIENT_ADDRESS = import.meta.env.EMAIL_CLIENT_ADDRESS;
   const EMAIL_CLIENT_PASSWORD = import.meta.env.EMAIL_CLIENT_PASSWORD;
+  const EMAIL_FORWARD_ADDRESS = import.meta.env.EMAIL_FORWARD_ADDRESS;
 
   const transporter = nodemailer.createTransport({
     service: "SMTP",
@@ -27,7 +28,7 @@ export default async function sendEmail({
       from: name,
       //replyTo: emailAddress,
       priority: "high",
-      to: EMAIL_CLIENT_ADDRESS,
+      to: EMAIL_FORWARD_ADDRESS,
       subject: `${name} - via your portfolio site 🚀`,
       text: message,
       html: `<h1>${name}</h1><address>${emailAddress}</address><p>${message}</p>`,

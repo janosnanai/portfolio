@@ -29,22 +29,14 @@
       }),
     });
 
-    console.log(res);
-
     if (res.ok) {
-      console.log("message sent succesfully");
+      // console.log("message sent succesfully");
       sendStatus = "success";
       messageForm.reset();
     } else {
-      console.log("error while sending message");
+      // console.log("error while sending message");
       sendStatus = "error";
     }
-
-    console.log({
-      name: $name.value,
-      emailAddress: $emailAddress.value,
-      message: $message.value,
-    });
   }
 </script>
 
